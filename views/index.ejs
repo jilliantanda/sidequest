@@ -3,12 +3,18 @@
 
 <body>
     <h1>Quests Index Page</h1>
+   <table>
     <% for(let i = 0; i < quests.length; i++){ %>
-        <p> <%= quests[i].title %></p>
-        <p> <%= quests[i].description %></p>
-        <p> <%= quests[i].questType %></p>
-        <p> <%= quests[i].imageURL %></p>
-        <p> <%= quests[i].isCompleted %></p>
-  <%  } %>
+        <tr>
+        <td><%= quests[i].title %></td>
+        <!-- <td><%= quests[i].description %></td> -->
+        <td><%= quests[i].questType %></td>
+        <td><%= quests[i].imageURL %></td>
+
+        <% } %>
+        </tr>
+       
+   </table> 
+        <a href="/newquest">Add another quest</a>
 </body>
 </html>
