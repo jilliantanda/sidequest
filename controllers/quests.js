@@ -3,7 +3,7 @@ const router = express.Router()
 const Quest = require('../models/quests.js')
 
 router.get('/', async (req, res) => {
-    res.send('home page')
+    res.render('welcome.ejs')
 })
 
 router.get('/questlog/', async (req, res) => {

@@ -9,6 +9,8 @@ const mongoURI = 'mongodb://127.0.0.1:27017/quests'
 app.use(express.urlencoded({extended:true}));
 // app.use(methodOverride('_method'))
 app.use(questsController)
+app.use(express.static('public'))
+app.use(express.json())
 
 async function conntectToMongo(){
     try {

@@ -3,10 +3,11 @@
 
 <body>
     <h1>Quests Index Page</h1>
-   <table>
+   <table class="layout">
     <% for(let i = 0; i < quests.length; i++){ %>
         <tr>
         <td><%= quests[i].title %></td>
+ 
         <!-- <td><%= quests[i].description %></td> -->
         <td><%= quests[i].questType %></td>
         <td><%= quests[i].imageURL %></td>
@@ -17,4 +18,4 @@
    </table> 
         <a href="/newquest">Add another quest</a>
 </body>
-</html>
+
