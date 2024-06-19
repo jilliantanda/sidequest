@@ -1,21 +1,39 @@
-
 <%- include('./partials/head.ejs') %>
 
-<body>
-    <h1>Quests Index Page</h1>
-   <table class="layout">
+    <body id="log">
+        
+        <h1 class="center-align">Quests Log</h1>
+        <div class="indexcontainer">
+            <% for(let i=0; i < quests.length; i++){ %>
+                <div class="index">
+                <%= quests[i].imageURL %>
+                 
+                       <%= quests[i].title %> <br>
+                 
+
+                  
+                        <!-- <%= quests[i].description %> -->
+                   
+                    <%= quests[i].questType %> 
+  </div>
+
+                        <% } %>
+</div>
+        <a href="/newquest">Add another quest</a>
+    </body>
+
+
+
+    <!-- <table class="layout">
     <% for(let i = 0; i < quests.length; i++){ %>
         <tr>
         <td><%= quests[i].title %></td>
  
-        <!-- <td><%= quests[i].description %></td> -->
+        <td><%= quests[i].description %></td>
         <td><%= quests[i].questType %></td>
         <td><%= quests[i].imageURL %></td>
 
         <% } %>
         </tr>
        
-   </table> 
-        <a href="/newquest">Add another quest</a>
-</body>
-
+   </table>  -->

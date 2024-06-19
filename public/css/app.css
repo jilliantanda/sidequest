@@ -1,8 +1,11 @@
 body {
-    background-image: url("https://i.imgur.com/2YQV4UP.jpeg");
+     background-image: url("https://i.imgur.com/2YQV4UP.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    height:fit-content;
+    height: 100vh;
+    font-family: "Rosarivo", cursive;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -10,28 +13,80 @@ body {
   background-color: rgba(80, 87, 105, 0.536);
   border-radius: 20px;
   padding: 10px;
-  padding-bottom: 15px;
-  margin-top: 100px;
-  margin-left: 150px;
-  margin-right: 150px;
-
-
+  padding-bottom: 50px;
+  max-width: 750px;
+  margin: 0 auto;
+  position: sticky;
+  top: 25%;
 }
+
 
 #button {
-    background-color: white;
-    color:gray;
+ background-color: white;
+ color:gray;
  display: block;
- margin-left: 40%;
- margin-right: 40%;
+ margin: 0 auto;
+ width: 225px;
 }
 
-.rosarivo-regular {
-    font-family: "Rosarivo", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
+#newbutton {
+    background-color: white;
+    color:gray;
+    display: block;
+    margin: 0 auto;
+    width: 225px;
+}
 
+#new, #log {
+    color:white;
+}
+
+.newquest {
+    background-color: rgba(80, 87, 105, 0.536);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 30%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 15%;
+}
+
+.indexcontainer {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.index {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    padding: 10px;
+    background-color: rgba(49, 116, 175, 0.415);
+    margin-right: 30px;
+    margin-top: 25px;
+    border-radius: 5px;
+    justify-content: center;
+    
+}
+
+#log {
+    background-color: grey;
+}
 
 .nav-wrapper{
     background-color: grey;

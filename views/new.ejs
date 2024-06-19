@@ -1,9 +1,11 @@
 
 <%- include('./partials/head.ejs') %>
 
-    <body>
-        <h1>Add a Quest!</h1>
-        <form action="/questlog/" method="POST">
+    <body id ="new">
+        
+        <h1 class="newh1">Add to quest log!</h1>
+        <div class="newquest">
+        <form action="/questlog/" id="newform" method="POST">
             Title: <input type="text" name="title"/><br>
             Description: <input type="text" name="description"/><br>
             Inspiration photo: <input type="text" name="imageUrl"/><br>
@@ -12,7 +14,8 @@
                 <option value="Experience">Experience</option>
                 <option value="Life Goal">Life Goal</option>
             </select>
-            Have you completed this quest? <input type="checkbox" name="isCompleted"/><br>
-            <input type ="submit" value="Add to quest log"/> 
+            Have you completed this quest? <input type="checkbox" name="isCompleted"/><br><br>
+            <input type ="submit" class="waves-effect waves-light btn" id="newbutton" value="Add to quest log"/> 
         </form>
+    </div>
     </body>
