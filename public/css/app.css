@@ -1,5 +1,5 @@
 body {
-     background-image: url("https://i.imgur.com/2YQV4UP.jpeg");
+    background-image: url("https://i.imgur.com/2YQV4UP.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -39,6 +39,8 @@ body {
 
 #new, #log {
     color:white;
+    background-color: rgba(80, 87, 105, 0.536);
+    background-image: none;
 }
 
 .newquest {
@@ -81,12 +83,37 @@ body {
     margin-top: 25px;
     border-radius: 5px;
     justify-content: center;
+    position: sticky;
     
+}
+
+.indexbutton {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    margin-top: 80%;
 }
 
 #log {
     background-color: grey;
 }
+
+
+#questcontainer {
+    display: flex;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    margin-left: 12%;
+    margin-top: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.213);
+}
+
 
 .nav-wrapper{
     background-color: grey;

@@ -13,6 +13,8 @@ router.get('/questlog/', async (req, res) => {
     })
 })
 
+
+
 router.get('/newquest/', (req, res) => {
     res.render('new.ejs')
 })
@@ -41,6 +43,13 @@ router.post('/questlog/', async (req, res) => {
     } catch (err) {
         console.error(err)
     }
+})
+
+router.get('/questlog/:id', async (req, res) => {
+    const showQuest = await Quest.findById(req.params.id)
+    res.render('show.ejs', {
+        quest: showQuest
+    })
 })
 
 module.exports = router;

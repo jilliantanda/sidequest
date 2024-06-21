@@ -1,7 +1,15 @@
 
 <%- include('./partials/head.ejs') %>
 
-<body>
-    <h1>Quest log</h1>
-    <%= quests.name %>
+<body id="quest">
+    <h1 class="center-align">Quest log</h1>
+    <div id="questcontainer">
+    <h2> <%= quest.title %></h2>
+    <p> <%= quest.description %></p>
+    </div>
+
+    <div class="imagediv">
+        <%= quest.img %>
+    </div>
+   <div class="home"> <a class="waves-effect waves-light btn" id= "button" href="/questlog/">Home</a></div>
 </body>
