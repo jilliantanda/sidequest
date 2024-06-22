@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs') %>
+
+    <h1> Edit!</h1>
+
+    <form action="/questlog/<%=quest._id%>?_method=PUT" method="POST">
+        <div>
+            Title: <input type="text" name="name" value="<%=quest.name%>" /><br />
+            Description <input type="text" name="Description" value="<%=quest.description%>" /><br />
+            Type of quest?
+            <input type="checkbox" name="<%=quest.type%>" <% if(quest.type===true){ %>
+            checked
+            <% } %>
+                />
+                <br />
+                <input type="submit" name="" value="Submit updated quest" />
+    </form>
+    </div>
