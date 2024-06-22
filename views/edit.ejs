@@ -16,7 +16,7 @@
                   Navigation
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/newquest">Add a quest</a></li>
+                  <li><a class="dropdown-item" href="/newquest">Add your next advanture!</a></li>
                   <li><a class="dropdown-item" href="/questlog/<%=quest._id %>/edit">Edit a quest</a></li>
                  
                 </ul>
@@ -30,8 +30,9 @@
 
         <form action="/questlog/<%=quest._id%>?_method=PUT" id="editform" method="POST">
 
-            Title: <input type="text" name="name" value="<%=quest.name%>" /><br />
-            Description <input type="text" name="Description" value="<%=quest.description%>" /><br />
+            Title: <input type="text" name="name" value="<%=quest.title%>" /><br />
+            Description: <input type="text" name="Description" value="<%=quest.description%>" /><br />
+            Inspiration image: <input type="text" name="imageURL" value="<%=quest.imageUrl%>" />
             Type of quest?
             <select id="questType" name="questType">
                 <option value="Travel">Travel</option>
