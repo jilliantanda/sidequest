@@ -1,21 +1,49 @@
-
 <%- include('./partials/head.ejs') %>
 
-    <body id ="new">
-        
+
+    <body id="new">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+                <img src="https://i.imgur.com/yb3A5DS.jpeg" alt="Logo" width="40" height="34"
+                    class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="/">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Navigation
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/questlog">View all quests</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <h1 class="newh1">Add to quest log!</h1>
         <div class="newquest">
-        <form action="/questlog/" id="newform" method="POST">
-            Title: <input type="text" name="title"/><br>
-            Description: <input type="text" name="description"/><br>
-            Inspiration photo: <input type="text" name="imageUrl"/><br>
-            What type of quest is this? <select id="questType" name="questType">
-                <option value="Travel">Travel</option>
-                <option value="Experience">Experience</option>
-                <option value="Life Goal">Life Goal</option>
-            </select>
-            Have you completed this quest? <input type="checkbox" name="isCompleted"/><br><br>
-            <input type ="submit" class="waves-effect waves-light btn" id="newbutton" value="Add to quest log"/> 
-        </form>
-    </div>
+            <form action="/questlog/" id="newform" method="POST">
+                Title: <input type="text" name="title" /><br>
+                Description: <input type="text" name="description" /><br>
+                Inspiration photo: <input type="text" name="imageUrl" /><br>
+                What type of quest is this? <select id="questType" name="questType">
+                    <option value="Travel">Travel</option>
+                    <option value="Experience">Experience</option>
+                    <option value="Life Goal">Life Goal</option>
+                </select>
+                <br>
+                Have you completed this quest? <input type="checkbox" name="isCompleted" /><br><br>
+                <input type="submit" class="waves-effect waves-light btn" id="button" value="Add to quest log" />
+            </form>
+        </div>
+        <%- include('./partials/body.ejs') %>
     </body>

@@ -20,7 +20,7 @@ router.get("/newquest/", (req, res) => {
 });
 
 // delete
-router.delete("/:id", async (req, res) => {
+router.delete("/questlog/:id", async (req, res) => {
   try {
     await Quest.findByIdAndDelete(req.params.id);
     res.redirect("/questlog");

@@ -20,6 +20,11 @@ body {
   top: 25%;
 }
 
+.shownav {
+    display: flex;
+    flex-direction:column;
+    position:sticky;
+}
 
 #button {
  background-color: white;
@@ -29,13 +34,6 @@ body {
  width: 225px;
 }
 
-#newbutton {
-    background-color: white;
-    color:gray;
-    display: block;
-    margin: 0 auto;
-    width: 225px;
-}
 
 #new, #log {
     color:white;
@@ -52,6 +50,7 @@ body {
     align-items: center;
     position: sticky;
     top: 30%;
+    height: 450px;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -83,6 +82,7 @@ body {
     margin-top: 25px;
     border-radius: 5px;
     justify-content: center;
+    flex-direction: column;
     position: sticky;
     
 }
@@ -96,10 +96,19 @@ body {
     margin-top: 80%;
 }
 
+
+
 #log {
     background-color: grey;
 }
 
+#questlog{
+    background-color: rgba(128, 128, 128, 0.527);
+    height: 100px;
+    display: flex;
+   justify-content: center;
+   padding: 30px;
+}
 
 #questcontainer {
     display: flex;
@@ -109,9 +118,30 @@ body {
     justify-content: center;
     margin-left: 12%;
     margin-top: 5%;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.213);
+}
+
+.description {
+    background-color: rgba(137, 137, 137, 0.904);
+    display: block;
+    align-items:center;
+    text-align: center;
+}
+
+
+.editcontainer {
+    background-color: rgba(80, 87, 105, 0.536);
+    border-radius: 20px;
+    color:white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 30%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 
