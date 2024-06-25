@@ -39,12 +39,13 @@ body {
 }
 
 .newquest {
-    background-color: rgba(80, 87, 105, 0.536);
+    background-color: rgba(40, 53, 43, 0.536);
     border-radius: 20px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: sticky;
     top: 30%;
     height: 450px;
@@ -55,10 +56,9 @@ body {
 .newh1 {
     display: flex;
     justify-content: center;
-    align-items: center;
     position: sticky;
     padding: 20px;
-    background-color: rgba(128, 128, 128, 0.453);
+    background-color: rgba(40, 53, 43, 0.536);
 }
 
 .indexcontainer {
@@ -75,10 +75,10 @@ body {
     height: 300px;
     display: flex;
     padding: 10px;
-    background-color: rgba(17, 101, 66, 0.289);
+    background-color: rgba(63, 85, 68, 0.868);
     margin-right: 30px;
     margin-top: 25px;
-    border-radius: 5px;
+    border-radius: 15px;
     justify-content: center;
     flex-direction: column;
     position: sticky;
@@ -90,6 +90,8 @@ body {
     display: flex;
     background-color: rgba(152, 152, 152, 0.354);
     position: absolute;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     top: 0; right: 0;
     width: 300px;
     height: 80px;
@@ -108,13 +110,12 @@ body {
     bottom: 15px;
 }
 
-
 #log {
     background-color: grey;
 }
 
 #indextitle{
-    background-color: rgba(0, 0, 0, 0.399);
+    background-color: rgba(40, 53, 43, 0.536);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -155,7 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: left;    
+    text-align: center; 
     flex-wrap: wrap;
     padding: 30px;
     margin: 0 auto;
@@ -166,7 +167,7 @@ body {
 
 
 .editcontainer {
-    background-color: rgba(80, 87, 105, 0.536);
+    background-color: rgba(40, 53, 43, 0.536);
     border-radius: 20px;
     color:white;
     padding: 20px;
@@ -181,14 +182,14 @@ body {
     margin: 0 auto;
 }
 
- #quest, #new, #log {
+ #quest, #new, #log, #editpage {
     background-color: none;
     background-image: url("https://i.imgur.com/OyrTZnG.jpeg");
     background-repeat: none;
     background-size: cover;
 }
  #log {
-    background-color: rgb(109, 109, 109); /* 50% transparent */
+    background-color: rgb(109, 109, 109);
     background-image: none;
  }
 
