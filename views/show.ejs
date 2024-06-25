@@ -21,6 +21,7 @@
                                 Navigation
                             </a>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/questlog">Back to quest log</a></li>
                                 <li><a class="dropdown-item" href="/newquest">Add a quest</a></li>
                                 <li><a class="dropdown-item" href="/questlog/<%=quest._id %>/edit">Edit this quest</a></li>
 
@@ -31,7 +32,7 @@
             </div>
         </nav>
 
-        <h1 class="center-align" id="questlog">
+        <h1 class="center-align" id="divtitle">
             <%= quest.title %>
         </h1>
         <div id="questcontainer">
@@ -40,26 +41,31 @@
                 <p>
                     <%= quest.description %>
                 </p>
-                <p> Category: <%= quest.questType %>
-                </p>
-                <p> </p>
+                <div><p> Category: <%= quest.questType %>
+                </p></div>
+                <div>
                 <% if(quest.isCompleted===true){ %>
                     Has this quest been completed? Yes
                     <% } else { %>
                         Has this quest been completed? No
                         <% } %>
-            </div>
-            <div class="shownav">
+                    </div>   
+                    <div class="deletebtn">
                 <form class="waves-effect waves-light btn" id="button" action="/questlog/<%=quest._id %>?_method=DELETE"
                     method="POST">
                     <input type="submit" value="DELETE">
                 </form>
             </div>
+            </div>
+         
+            <div class="imagediv"><img src="<%= quest.imageUrl %>" width="400" height="450"></div>
+              
         </div>
 
-        <div class="imagediv">
-            <%= quest.img %>
-        </div>
+
+          
+
+      
 
 
         <%- include('./partials/body.ejs') %>

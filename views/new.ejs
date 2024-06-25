@@ -31,19 +31,49 @@
         </nav>
         <h1 class="newh1">Add to quest log!</h1>
         <div class="newquest">
-            <form action="/questlog/" id="newform" method="POST">
+            <!-- <form action="/questlog/" id="newform" method="POST">
                 Title: <input type="text" name="title" /><br>
                 Description: <input type="text" name="description" /><br>
                 Inspiration photo: <input type="text" name="imageUrl" /><br>
-                What type of quest is this? <select id="questType" name="questType">
+                
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>What type of quest is this?</option>
                     <option value="Travel">Travel</option>
                     <option value="Experience">Experience</option>
                     <option value="Life Goal">Life Goal</option>
-                </select>
-                <br>
+                  </select>
+                
                 Have you completed this quest? <input type="checkbox" name="isCompleted" /><br><br>
                 <input type="submit" class="waves-effect waves-light btn" id="button" value="Add to quest log" />
-            </form>
+            </form> -->
+
+
+
+            <form action="/questlog/" id="newform" method="POST">
+           
+                  <label for="Title" class="form-label">Title:</label>
+                  <input type="text" class="form-control" name="title">
+                
+               
+                  <label for="description">Description:</label>
+                  <input type="text" name="description" class="form-control" name="description">
+            
+               
+                  <label for="Photo" class="form-label">Add an inspiration photo:</label>
+                  <input type="text" class="form-control" name="imageUrl">
+             
+               
+                  <input type="checkbox" name="isCompleted" class="form-check-input">
+                  <label class="form-check-label" for="exampleCheck1">Has this quest been completed?</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>What type of quest is this?</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Experience">Experience</option>
+                    <option value="Life Goal">Life Goal</option>
+                  </select>
+          
+                <button type="submit" class="btn btn-primary">Add to quest log</button>
+              </form>
         </div>
         <%- include('./partials/body.ejs') %>
     </body>

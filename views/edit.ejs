@@ -29,10 +29,10 @@
 
 
         <form action="/questlog/<%=quest._id%>?_method=PUT" id="editform" method="POST">
-
-            Title: <input type="text" name="name" value="<%=quest.title%>" /><br />
-            Description: <input type="text" name="Description" value="<%=quest.description%>" /><br />
-            Inspiration image: <input type="text" name="imageURL" value="<%=quest.imageUrl%>" />
+<!-- 
+            Title: <input type="text" name="title" value="<%=quest.title%>" /><br />
+            Description: <input type="text" name="description" value="<%=quest.description%>" /><br />
+            Inspiration image: <input type="text" name="imageUrl" value="<%=quest.imageUrl%>" />
             Type of quest?
             <select id="questType" name="questType">
                 <option value="Travel">Travel</option>
@@ -45,7 +45,33 @@
                 />
                 <br />
                 <input class="waves-effect waves-light btn" id="button" type="submit" name=""
-                    value="Submit updated quest" />
+                    value="Submit updated quest" /> -->
+
+                    <label for="Title" class="form-label">Title:</label>
+                  <input type="text" value="<%=quest.title%>" class="form-control" name="title">
+                
+               
+                  <label for="description">Description:</label>
+                  <input type="text" value="<%=quest.description%>" name="description" class="form-control" name="description">
+            
+               
+                  <label for="Photo" class="form-label">Add an inspiration photo:</label>
+                  <input type="text" value="<%=quest.imageUrl%>"class="form-control" name="imageUrl">
+             
+               
+                  <input type="checkbox" name="<%=quest.isCompleted%>" 
+                  <% if(quest.isCompleted===true){ %>
+                    checked
+                    <% } %>
+                        />
+                  <label class="form-check-label" for="exampleCheck1">Has this quest been completed?</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>What type of quest is this?</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Experience">Experience</option>
+                    <option value="Life Goal">Life Goal</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary">Submit updated quest</button>
         </form>
     </div>
     <%- include('./partials/body.ejs') %>

@@ -31,14 +31,34 @@
             </div>
         </nav>
 
-        <h1 class="center-align" id="questlog">Quest Log</h1>
-
+        <h1 class="center-align" id="indextitle">Quest Log</h1>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.imgur.com/Bqfk5F2.jpeg" class="d-block w-50" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.imgur.com/Bqfk5F2.jpeg" class="d-block w-50" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.imgur.com/Bqfk5F2.jpeg" class="d-block w-50" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <div class="indexcontainer">
             <% for(let i=0; i < quests.length; i++){ %>
                 <div class="index">
                     <%= quests[i].imageURL %>
 
-                        <div class="indextitle">
+                        <div class="divtitle">
                             <h4>
                                 <%= quests[i].title %>
                             </h4>
@@ -51,9 +71,10 @@
                         
                         </div>
 
+                       <div class="indexbtn">
 
-                        <div class="indexbutton"> <a class="waves-effect waves-light btn" id="button"
-                                href="/questlog/<%= quests[i]._id %>">View more</a> </div>
+                        <button class="btn btn-secondary btn-lg" href="/questlog/<%= quests[i]._id %>">View more</button>
+                          </div>
                 </div>
 
                 <% } %>
