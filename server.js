@@ -6,6 +6,8 @@ const port = process.env.PORT || 4000
 const questsController = require('./controllers/quests.js')
 const methodOverride = require("method-override")
 const mongoURI = process.env.MONGOURI;
+// 'mongodb://127.0.0.1:27017/quests'
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
