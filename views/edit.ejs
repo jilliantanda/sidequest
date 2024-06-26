@@ -19,8 +19,9 @@
                                 Navigation
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/newquest">Add your next advanture!</a></li>
-                                <li><a class="dropdown-item" href="/questlog/<%=quest._id %>/edit">Edit a quest</a></li>
+                                <li><a class="dropdown-item" href="/questlog">Back to quest log</a></li>
+                                <li><a class="dropdown-item" href="/newquest">Add your next advanture</a></li>
+                                
 
                             </ul>
                         </li>
@@ -35,9 +36,7 @@
 
 
                 <label for="description">Description:</label>
-                <input type="text" value="<%=quest.description%>" name="description" class="form-control"
-                    name="description">
-
+                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" value="<%=quest.description%>"rows="3"></textarea>
 
                 <label for="Photo" class="form-label">Add an inspiration photo:</label>
                 <input type="text" value="<%=quest.imageUrl%>" class="form-control" name="imageUrl">
