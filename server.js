@@ -1,18 +1,19 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+require('dotenv').config()
 const port = process.env.PORT || 4000
 const questsController = require('./controllers/quests.js')
 const methodOverride = require("method-override")
-const mongoURI = 'mongodb://127.0.0.1:27017/quests'
+const mongoURI = process.env.MONGOURI;
 
+app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
-app.use(questsController)
 app.use(express.static('public'))
-app.use(express.json())
+app.use(questsController)
 
-async function conntectToMongo(){
+async function connectToMongo(){
     try {
         await mongoose.connect(mongoURI)
     } catch (err){
@@ -20,7 +21,7 @@ async function conntectToMongo(){
     }
 }
 
-conntectToMongo()
+connectToMongo()
 
 
 app.listen(port, () => {
