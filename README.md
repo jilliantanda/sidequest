@@ -1,7 +1,7 @@
-IRL side quests
+# IRL side quests
 
 # Description 
-IRL side quests is a web application using embedded javascript that allows user to track items on their bucket list. User has the ability to create, edit, delete, and view all items on their list. All items are displayed on the quest log and user has the ability to view more details for each item.
+  IRL side quests is a web application using embedded javascript that allows user to track items on their bucket list. User has the ability to create, edit,   delete, and view all items on their list. All items are displayed on the quest log and user has the ability to view more details for each item.
 
 # Approach taken
 Using the format INDUCES, each route was created one after the other until all CRUD (Create, Read, Update, Delete) operations were possible. Inital index route was styled first to create a better blueprint for the following pages. Wireframe was referenced regularly to stay on track of how the application should look. 
